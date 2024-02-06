@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio yunus ilyasa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll('nav a');
+
+            function handleNavClick(event) {
+                event.preventDefault();
+                var targetId = this.getAttribute('href').substring(1);
+                var targetElement = document.getElementById(targetId);
+
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', handleNavClick);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div id="home" class="jumbotron">
+            <figure>
+                <img src="assets/img/iyos.png" alt="logo">
+                <h1>Yunus Ilyasa</h1>
+                <figcaption>Computer Engineering Student</figcaption>
+            </figure>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <article id="about" class="card">
+                <h2>About Me</h2>
+                <p>I am a computer engineering student who is enthusiastic about exploring the world of technology. Although I still feel less knowledgeable in certain aspects, particularly in networking issues, I am very interested in understanding it more deeply. My desire to be involved in the understanding and development of networks is one of my main motivations in my educational journey. I believe that with hard work and a strong learning spirit, I will be able to overcome these challenges and become more skilled in this field. Network technology is an ever-evolving area, and I am committed to continuously learning and contributing to the development of this technology.</p>
+            </article>
+
+            <article id="project" class="card">
+                <h2>Project</h2>
+                <div class="pict">
+                    <img src="assets/img/mekatron.png" class="picture-image" alt="poto1">
+                    <img src="assets/img/prokon.jpg" class="picture-image" alt="poto2">
+                    <img src="assets/img/pbo.jpg" class="picture-image" alt="poto3">
+                </div>
+            </article>
+            
+            <article id="contact" class="card">
+                <h2>Contact Me</h2>
+                <form >
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+            
+                    <button type="submit">Submit</button>
+                </form>    
+            </article>
+        </div>
+
+        <aside>
+            <article class="data card">
+                <header>
+                    <h2>PROFILE</h2>
+                    <figure>
+                        <img src="assets/img/propil.png" alt="profile">
+                    </figure>
+                </header>
+                <section>
+                    <h3>DATA</h3>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <td>:</td>
+                            <td>Yunus Ilyasa</td>
+                        </tr>
+                        <tr>
+                            <th>Hometown</th>
+                            <td>:</td>
+                            <td>Cianjur</td>
+                        </tr>
+                        <tr>
+                            <th>Hobby</th>
+                            <td>:</td>
+                            <td>photography</td>
+                        </tr>
+                        <tr>
+                            <th>Instagram</th>
+                            <td>:</td>
+                            <td>@ynus.i</td>
+                        </tr>
+                    </table>
+                </section>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+        <p class="puter">THANK YOU DICODING &#169;2024, Yunus Ilyasa</p>
+    </footer>
+</body>
+
+</html>
